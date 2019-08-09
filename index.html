@@ -1,36 +1,136 @@
 <!DOCTYPE html>
-
 <html>
 
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="vital_youth.css">
-
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Quintessential&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href = "VitalYouth.css">
+    <script src="VitalYouth.js"></script>
+
   </head>
 
-  <!-- make div using <div id="">text</div> -->
-
   <body>
-    <!-- <center><img id="logo"
-    src="vital_youth_logo.png" alt="logo image"></center> -->
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <div class="header">
-      <a href="#default" class="logo">CompanyLogo</a>
-      <div class="header-right">
-        <a class="active" href="#home">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-      </div>
-      </div> -->
-    <h1></h1>
-    <center><img id="nature"
-      src="https://therightsofnature.org/wp-content/uploads/2018/01/turkey-3048299_1920-1366x550.jpg" alt="nature"></center>
-    <div id="mission"><br>Our Mission</div>
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <h5></h5>
-    <h6></h6>
+  <div class="topnav" id="myTopnav">
+    <a onclick="smoothScroll(document.getElementById('home'))" class="active"><img src="f5f65480-7702-4a79-acbb-5843e2f104b1_200x200.png" height="50px" width= "50px" alt="Vital Youth Logo"></a>
+    <a onclick="smoothScroll(document.getElementById('section0'))" style="float:right;">Our Mission</a>
+    <a onclick="smoothScroll(document.getElementById('section1'))" style="float:right;">Crime</a>
+    <a onclick="smoothScroll(document.getElementById('section2'))" style="float:right;">Mental Health</a>
+    <a onclick="smoothScroll(document.getElementById('section3'))" style="float:right;">College and Employment Opportunities</a>
+    <a onclick="smoothScroll(document.getElementById('section4'))" style="float:right;">About Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<!--home-->
+    <div class="home" id="home" style:"padding-top: 0px; margin-top: 0px">
+      <div class="layer"></div>
+      <div class="title"><h1>Vital Youth</h1></div>
+    </div>
+
+    <div style="height:100px;background-color:white; transparent:50%;">
+<!-- content -->
+      <section id = "section0">
+        <h2> Our Mission </h2>
+      </section>
+    </div>
+<!--crime-->
+    <div class="crime">
+    </div>
+    <div style="height:100px;background-color:white; transparent:50%;">
+<!-- content -->
+      <section id = "section1">
+        <h2> Crime </h2>
+      </section>
+    </div>
+<!--health-->
+    <div class="health">
+    </div>
+    <div style="height:400px;background-color:white; transparent:50%;">
+<!-- content -->
+      <section id = "section2">
+        <h2> Mental Health </h2>
+          <p id="body"> In a world with techonology at its focus, and personal health being second important... younger generations are struggling to find a balance in life. A good balance in life starts with good mental health. Click the links below to find out how you can improve your mental health depending on your situation.
+              <div class="container">
+                <img src="selflove.jpg" alt="Self Love" class="image">
+                  <div class="overlay">
+                    <div class="text">Self Love</div>
+                  </div>
+              </div>
+
+
+              <div class="container">
+                <img src="pressure.jpg" alt="Handling Pressure" class="image">
+                  <div class="overlay">
+                    <div class="text">Handling Pressure</div>
+                  </div>
+              </div>
+
+              <div class="container">
+                <img src="issues.jpg" alt="Family Issues" class="image">
+                  <div class="overlay">
+                    <div class="text">Family Issues</div>
+                  </div>
+              </div>
+              <div class="container">
+                <img src="social.jpg" alt="Social Lives" class="image">
+                  <div class="overlay">
+                    <div class="text">Social Lives</div>
+                  </div>
+              </div>
+          </p>
+      </section>
+    </div>
+<!--college-->
+    <div class="college">
+    </div>
+    <div style="height:100px;background-color:white; transparent:50%;">
+<!-- content -->
+      <section id = "section3">
+        <h2> College and Employment Opportunities </h2>
+      </section>
+    </div>
+<!--about-->
+    <div class="about">
+    </div>
+    <div style="height:100px;background-color:white; transparent:50%;">
+
+<!-- content -->
+      <section id = "section4">
+        <h2> About Us </h2>
+          <p>Meet the founders of Vital Youth!
+            <div class="container">
+              <img src=".jpg" alt="" class="image">
+                <div class="overlay">
+                  <div class="text">Name 1</div>
+                </div>
+            </div>
+            <div class="container">
+              <img src=".jpg" alt="" class="image">
+                <div class="overlay">
+                  <div class="text">Name 2</div>
+                </div>
+            </div>
+            <div class="container">
+              <img src=".jpg" alt="" class="image">
+                <div class="overlay">
+                  <div class="text">Name 3</div>
+                </div>
+            </div>
+          </p>
+      </section>
+    </div>
+
+
+<!--footer-->
+    <div class="footer">
+       Text
+    </div>
+
   </body>
-
 </html>
