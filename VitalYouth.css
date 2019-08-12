@@ -1,7 +1,22 @@
-h2,h3,h4,h5,h6 {font-family: 'Cormorant Infant', serif;}
+/* page setup */
 body, html {
   height: 100%;
   line-height: 1.8;
+}
+/* page setup */
+
+/* fonts begin*/
+h2,h3,h4,h5,h6 {font-family: 'Cormorant Infant', serif;}
+
+.title {
+  font-family: 'Quintessential', cursive;
+  font-size: 48px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
 }
 
 h2 {
@@ -13,6 +28,12 @@ h2 {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+#body {
+  font-family: 'Lora', serif;
+}
+
+/* fonts end */
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -84,6 +105,7 @@ h2 {
     box-sizing: border-box;
 }
 
+/* homescreen layout css begins */
 .home {
   /* The image used */
   background-image: url('mountains.jpg');
@@ -113,19 +135,9 @@ h2 {
   background-size: cover;
   z-index: -2;
 }
+/* homescreen layout ends */
 
-
-.title {
-  font-family: 'Quintessential', cursive;
-  font-size: 48px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  z-index: 0;
-}
-
+/* individual section images begin */
 .crime {
   /* The image used */
   background-image: url('ice.jpg');
@@ -180,11 +192,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* individual section images ends */
 
-#body {
-  font-family: 'Lora', serif;
-}
-
+/* image squares begin */
 .container {
   position: relative;
   width: 25%;
@@ -224,7 +234,9 @@ h2 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+/* image squares end */
 
+/* footer */
 .footer {
   position: fixed;
   left: 0;
