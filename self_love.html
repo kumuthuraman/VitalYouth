@@ -3,6 +3,8 @@
 <html>
 
   <head>
+    <link rel="stylesheet" href="magicslideshow/magicslideshow.css"/>
+    <script src="magicslideshow/magicslideshow.js"></script>
     <style>
       img {
         opacity: 0.7;
@@ -39,19 +41,19 @@
       .boxed {
         border: 1px solid black;
       }
-      h1 { /* here's the sitch .. pink light font */
+      h1 { 
         font-family: "Lora", serif;
         font-size: 22px;
         line-height: 1.3125;
         text-transform: uppercase;
         letter-spacing: 0.25rem;
-        color: #cc147f;
+        color: #f25f5c;
         margin-top: 175px;
         margin-bottom: 10px;
         padding-left: 175px;
         font-weight: 400;
       }
-      .subhead1 { /* your high school career .. bold */
+      .subhead1 {
         color: #000000;
         font-family: 'Cormorant Infant', serif;
         background-color: white;
@@ -66,7 +68,7 @@
         padding-right: 200px;
         margin-bottom: 3rem;
       }
-      .one { /* in recent years .. light font */
+      .one {
         color: rgba(85, 85, 85, 0.95);
         font-family: "Lora", serif;
         font-size: 26px;
@@ -78,7 +80,7 @@
         line-height: 1.5;
         letter-spacing: 0.1rem;
       }
-      h2 { /* pink light font .. tip number 1 */
+      h2 {
         background-color: #F0F0F0;
         font-size: 20px;
         padding-left: 175px;
@@ -86,7 +88,7 @@
         padding-top: 175px;
         padding-bottom: 20px;
         margin:0;
-        color: #cc147f;
+        color: #f25f5c;
         font-family: "Lora", serif;
         line-height: 1.3125;
         text-transform: uppercase;
@@ -94,7 +96,6 @@
         letter-spacing: 0.25rem;
       }
       .subhead2 {
-        /* your high school career .. bold */
           color: #000000;
           font-family: 'Cormorant Infant', serif;
           background-color: #F0F0F0;
@@ -108,7 +109,7 @@
           padding-left: 175px;
           padding-right: 200px;
       }
-      .two { /* don't wait until the fall of .. */
+      .two {
         font-family: "Lora", serif;
         margin: 0;
         padding: 0;
@@ -130,14 +131,14 @@
         padding-top: 175px;
         padding-bottom: 20px;
         margin:0;
-        color: #cc147f;
+        color: #f25f5c;
         font-family: "Lora", serif;
         line-height: 1.3125;
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 0.25rem;
       }
-      .subhead3 { /* high school students .. bold */
+      .subhead3 {
         color: #000000;
         font-family: 'Cormorant Infant', serif;
         background-color: white;
@@ -166,31 +167,6 @@
         padding-top: 50px;
         letter-spacing: 0.1rem;
       }
-      .column {
-        float: left;
-        width: 33.33%;
-        /* margin-right: 8px; */
-      }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .resume_facts {
-        color: rgba(85, 85, 85, 0.95);
-        font-family: "Lora", serif;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-        font-size: 26px;
-        font-weight:  lighter;
-        line-height: 1.5;
-        padding-bottom: 200px;
-        padding-left: 175px;
-        /* padding-right: 100px; */
-        letter-spacing: 0.1rem;
-        padding-top: 22px;
-      }
     </style>
   </head>
 
@@ -203,7 +179,7 @@
       <div class="centered" id="text">Self Love</div>
     </div>
 
-    <h1>/ here's the sitch<br></br></h1>
+    <h1>/ here's the thing<br></br></h1>
       <div class="subhead1">
         To love anyone and anything, you must love yourself first and accept your past.
       </div>
@@ -211,71 +187,22 @@
         Of course it is easier said than done, so what can you do so loving yourself is easier done than said?
       </div>
 
-    <h2>/ info</h2>
-      <div class="subhead2">
-      info
-      </div>
+    <h2>/ TIPS</h2>
       <div class="two">
-        info
-        <br></br>info
+        <div class="container">
+        </div>
+
+        <div class="MagicSlideshow" data-options="selectors-style: bullets; selectors: bottom;">
+            <img src="1.png"/>
+            <img src="2.png"/>
+            <img src="3.png"/>
+            <img src="4.png"/>
+            <img src="5.png"/>
+            <img src="6.png"/>
+            <img src="7.png"/>
+            <img src="8.png"/>
+        </div>
       </div>
-    <h3>/ info</h3>
-      <div class="subhead3">
-        info
-      </div>
-      <div class="three">
-        info
-      <br></br>
-      </div>
-
-      <div class="resume_facts">
-            <div class="row">
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>
-            / info<br>
-            <p></p>
-            </div>
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>info
-            <p></p>
-            </div>
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>info
-            <p></p>
-            </div>
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>info
-            <p></p>
-            </div>
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>info
-            <p></p>
-            </div>
-
-            <div class="column"><b>info</b><p>
-            / info<br>
-            / info<br>
-            / info<br>info
-            <p></p>
-            </div>
-
-     <!-- </div> ends div for row in columns -->
-
   </body>
 
   </html>
