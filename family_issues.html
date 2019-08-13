@@ -4,6 +4,77 @@
 
   <head>
     <style>
+/* Add a black background color to the top navigation */
+      .topnav {
+        position:fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background-color: #000;
+        overflow: hidden;
+        z-index: 3;
+      }
+
+/* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+        font-size: 21px;
+        font-family: 'Cormorant Infant', serif;
+      }
+
+/* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: #fff;
+        color: black;
+      }
+
+/* Add an active class to highlight the current page */
+      .topnav a.active {
+        background-color: #000;
+        color: white;
+      }
+
+/* Hide the link that should open and close the topnav on small screens */
+      .topnav .icon {
+        display: none;
+      }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive a.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      *, *:before, *:after {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+/* Image title*/
       img {
         opacity: 0.7;
         filter: alpha(opacity=20);
@@ -196,6 +267,18 @@
   <!--ACTUAL CONTENT NOT STYLING CAN BE FOUND BELOW -->
   <title>Family Issues</title>
   <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active"><img src="f5f65480-7702-4a79-acbb-5843e2f104b1_200x200.png" height="50px" width= "50px" alt="Vital Youth Logo"></a>
+      <a href="index.html#section0" style="float:right;">Our Mission</a>
+      <a href="index.html#section1" style="float:right;">Crime</a>
+      <a href="index.html#section2" style="float:right;">Mental Health</a>
+      <a href="index.html#section3" style="float:right;">College and Employment Opportunities</a>
+      <a href="index.html#section4" style="float:right;">About Us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
     <div class="container">
       <img src="issues.png" alt="pink mountains"
         style="width:1450px;height:400px">
@@ -227,7 +310,7 @@
         <ul>
           <li>Talk to friends/family
           <li>Get relationship counseling or mediation
-          <li>Check out online information and resources like <a href="https://www.familyrelationships.gov.au/">https://www.familyrelationships.gov.au/<a> or <a href="https://www.lifeline.org.au/get-help/topics/family-relationship-problems">Life Line</a> 
+          <li>Check out online information and resources like <a href="https://www.familyrelationships.gov.au/">https://www.familyrelationships.gov.au/<a> or <a href="https://www.lifeline.org.au/get-help/topics/family-relationship-problems">Life Line</a>
 
           <li>Attend courses/workshops in communication, parenting, budgeting and positive communication skills
           <li>See your GP if you are concerned about mental health problems in yourself or others
@@ -235,5 +318,41 @@
       </div>
 
   </body>
+
+  <script>
+  // navbar
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+  window.smoothScroll = function(target) {
+      var scrollContainer = target;
+      do { //find scroll container
+          scrollContainer = scrollContainer.parentNode;
+          if (!scrollContainer) return;
+          scrollContainer.scrollTop += 1;
+      } while (scrollContainer.scrollTop == 0);
+
+      var targetY = -100;
+      do { //find the top of target relatively to the container
+          if (target == scrollContainer) break;
+          targetY += target.offsetTop;
+      } while (target = target.offsetParent);
+
+      scroll = function(c, a, b, i) {
+          i++; if (i > 30) return;
+          c.scrollTop = a + (b - a) / 30 * i;
+          setTimeout(function(){ scroll(c, a, b, i); }, 20);
+      }
+      // start scrolling
+      scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+  }
+  </script>
 
   </html>
